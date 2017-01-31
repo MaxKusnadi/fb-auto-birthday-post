@@ -2,6 +2,7 @@
 /Lib
 /Scripts
 /tcl
+/selenium
 
 __pycache__/
 
