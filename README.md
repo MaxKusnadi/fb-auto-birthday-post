@@ -24,4 +24,4 @@ There are 2 ways of entering your credential:
 
 ===
 
-Created by [me](maxkusnadi.github.io)
+Created by [me](https://maxkusnadi.github.io)
