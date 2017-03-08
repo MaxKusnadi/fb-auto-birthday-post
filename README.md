@@ -24,7 +24,8 @@ There are 2 ways of entering your credential:
 
 ## Running this script on startup
 
-Linux user, check [this](http://askubuntu.com/questions/814/how-to-run-scripts-on-start-up) out
+Linux user, check [this](http://askubuntu.com/questions/814/how-to-run-scripts-on-start-up) out.
+
 Windows user, you can go [here](https://www.howtogeek.com/138159/how-to-enable-programs-and-custom-scripts-to-run-at-boot/).
 
 ===
