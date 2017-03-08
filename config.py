@@ -1,2 +1,4 @@
-EMAIL = "sac"
-PASSWORD = "saxc"
+# Enter your credential here
+
+EMAIL = ""
+PASSWORD = ""
