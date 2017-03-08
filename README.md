@@ -22,6 +22,11 @@ There are 2 ways of entering your credential:
 1. Open `wishes.py`
 2. Add your custom messages to the list
 
+## Running this script on startup
+
+Linux user, check [this](http://askubuntu.com/questions/814/how-to-run-scripts-on-start-up) out
+Windows user, you can go [here](https://www.howtogeek.com/138159/how-to-enable-programs-and-custom-scripts-to-run-at-boot/).
+
 ===
 
 Created by [me](https://maxkusnadi.github.io)
