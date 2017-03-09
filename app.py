@@ -67,7 +67,28 @@ class FB_Auto_Birthday(object):
 
     def firing_up_driver(self):
         def initialize_driver():
-            self.driver = webdriver.Chrome('./chromedriver')
+            try:  # Linux
+                logging.info("Initializing chrome for linux")
+                self.driver = webdriver.Chrome('./chromedriver_linux')
+            except:
+                logging.error("Can't initialize chrome for linux")
+                try:
+                    logging.info("Initializing chrome for windows")
+                    self.driver = webdriver.Chrome('./chromedriver_win.exe')
+                except:
+                    logging.error("Can't initialize chrome for windows")
+                    try:
+                        logging.info("Initializing chrome for mac")
+                        self.driver = webdriver.Chrome('./chromedriver_mac')
+                    except:
+                        logging.error("Can't initialize chrome for mac")
+                        logging.error("Can't initialize chrome at all")
+                    else:
+                        logging.info("Setup successful")
+                else:
+                    logging.info("Setup successful")
+            else:
+                logging.info("Setup successful")
 
         def driver_open_url():
             self.driver.get("http://facebook.com/events/birthdays")
@@ -120,7 +141,6 @@ class FB_Auto_Birthday(object):
 
 def main():
     app = FB_Auto_Birthday()
-    logging.info("Setup successful")
     app.main()
 
 if __name__ == '__main__':
