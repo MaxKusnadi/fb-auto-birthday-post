@@ -8,7 +8,8 @@ This hack can probably save 2 to 3 hours of your life.
 2. Clone this repo by typing `git clone https://github.com/MaxKusnadi/fb-auto-birthday-post.git` on your command line
 3. Enter `cd fb-auto-birthday-post`
 4. Enter `pip install -r requirements.txt`
-5. Enter `python app.py` if *Setup Successful* appears on your command line, it means everything is fine
+5. Download `chromedriver` from [here](https://sites.google.com/a/chromium.org/chromedriver/downloads). Unzip and put inside the `fb-auto-birthday-post` folder. **This is an important step, otherwise the program will not work**
+6. Enter `python app.py` if *Setup Successful* appears on your command line, it means everything is fine
 
 ## Entering your credential
 
