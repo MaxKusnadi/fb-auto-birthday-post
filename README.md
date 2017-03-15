@@ -34,6 +34,6 @@ Windows user, you can go [here](https://www.howtogeek.com/138159/how-to-enable-p
 
 People who use windows git bash may get a problem in which password prompt does not appear after the email prompt. The solution can be found [here](http://stackoverflow.com/questions/32597209/python-not-working-in-the-command-line-of-git-bash) or else, just update `config.py` file
 
-===
+---
 
 Created by [me](https://maxkusnadi.github.io)
