@@ -1,4 +1,5 @@
 import logging
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -20,7 +21,7 @@ class FB_Auto_Birthday(object):
 
     def send_birthday_wishes(self):
         divs = self.get_birthday_list()
-        birthday_div = divs.find_element_by_xpath("./div")
+        birthday_div = divs.find_element_by_xpath("..")
 
         def is_today_birthday():
             return "Today's Birthdays" in birthday_div.text
@@ -41,6 +42,7 @@ class FB_Auto_Birthday(object):
             for text in text_areas:
                 text.send_keys(random.choice(BIRTHDAY_WISHES))
                 text.send_keys(Keys.RETURN)
+                time.sleep(10)
 
         if is_today_birthday():
             execute_birthday()
@@ -48,7 +50,7 @@ class FB_Auto_Birthday(object):
             execute_no_birthday()
 
     def get_birthday_list(self):
-        return self.driver.find_element_by_id("events_birthday_view")
+        return self.driver.find_element_by_id("birthdays_today_card")
 
     def getting_login_details(self):
         def ask_email():
@@ -124,7 +126,7 @@ class FB_Auto_Birthday(object):
             try:
                 self.get_birthday_list()
             except:
-                self.driver.close()
+                # self.driver.close()
                 logging.error("Wrong email or password?")
                 global EMAIL
                 global PASSWORD
