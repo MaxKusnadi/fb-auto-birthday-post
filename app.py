@@ -38,9 +38,11 @@ class FB_Auto_Birthday(object):
                 self.driver.close()
 
             import random
+            import time
 
             for text in text_areas:
                 text.send_keys(random.choice(BIRTHDAY_WISHES))
+                time.sleep(2)
                 text.send_keys(Keys.RETURN)
                 time.sleep(10)
 
@@ -70,25 +72,10 @@ class FB_Auto_Birthday(object):
     def firing_up_driver(self):
         def initialize_driver():
             try:  # Linux
-                logging.info("Initializing chrome for linux")
-                self.driver = webdriver.Chrome('./chromedriver_linux')
+                logging.info("Initializing chrome")
+                self.driver = webdriver.Chrome('./chromedriver')
             except:
-                logging.error("Can't initialize chrome for linux")
-                try:
-                    logging.info("Initializing chrome for windows")
-                    self.driver = webdriver.Chrome('./chromedriver_win.exe')
-                except:
-                    logging.error("Can't initialize chrome for windows")
-                    try:
-                        logging.info("Initializing chrome for mac")
-                        self.driver = webdriver.Chrome('./chromedriver_mac')
-                    except:
-                        logging.error("Can't initialize chrome for mac")
-                        logging.error("Can't initialize chrome at all")
-                    else:
-                        logging.info("Setup successful")
-                else:
-                    logging.info("Setup successful")
+                logging.error("Can't initialize chrome")
             else:
                 logging.info("Setup successful")
 
